@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <form class="place-input-form" action="/try_place" method="POST">
+        <input class="place-input" type="text" name="place" value="{{ place }}">
+        <button class="btn btn-info place-submit" type="input" name="place-button">Refresh</button>
+    </form>
+    <p class="city-input-description">Forecast is provided for cities in Finland</p>
+    {% if forecast %}
+        {% for recordTimeStamp in forecast.keys() %}
+            <div class="weather-item-bundle">
+                <div class="weather-item">
+                    <p class="hours">{{ forecast[recordTimeStamp]['hours'] }}</p>
+                    <p class="date">{{ forecast[recordTimeStamp]['date'] }}</p>
+                    <div class="weather-icon {{ forecast[recordTimeStamp]['icon'] }}"></div>
+                </div>
+                <div class="temperature-item" style="--temp: {{ forecast[recordTimeStamp]['Temperature'] + 50.0 }}%;">
+                    <div class="temperature {{ forecast[recordTimeStamp]['temperature-color'] }}"></div>
+                    <div class="termometer-zero"></div>
+                    <div class="temperature-textlabel">{{ forecast[recordTimeStamp]['Temperature'] }}°C</div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="service-report-warning">No weather forecast data is received</p>
+    {% endif %}
+{% endblock content %}

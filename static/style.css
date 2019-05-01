@@ -1,0 +1,166 @@
+body {
+    background-image: url(il_794xN.1003150501_8p67[2].jpg);
+    background-repeat: repeat;
+}
+h1{
+    position:   relative;
+    color: #00c;
+    background-color: white;
+    opacity: 0.8;
+}
+.orange {
+    background-color: #c50;
+}
+.weather-item-bundle {
+    float: left;
+    width: 140px;
+    height: 140px;
+    margin: 25px 5px 25px 5px;
+}
+.weather-item {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    background-color: orange;
+    opacity: 0.95;
+    padding: 10px;
+    float: left;
+    border-radius: 10px;
+    border: 1px solid orange;
+}
+.temperature-item{
+    position: relative;
+    width: 10%;
+    height: 100%;
+    float: right;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px 0px rgba(50,20,0,0.55);
+}
+.temperature{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-radius: 4px;
+    height: var(--temp);
+}
+.temperature-textlabel{
+    position:   absolute;
+    bottom: 0;
+    right: 120%;
+    font-size: 15px;
+    color: #909;
+    height: var(--temp);
+}
+.termometer-zero{
+    position:   absolute;
+    bottom: 50%;
+    width: 120%;
+    right: -10%;
+    border: 1px solid black;
+    color: black;
+    }
+.temperature-warm {
+    background-color: #d55;
+}
+.temperature-cold {
+    background-color: #55f;
+}
+.weather-icon{
+    position:   absolute;
+    max-width: 70%;
+    max-height: 70%;
+    height: auto;
+    border-radius: 50%;
+    bottom: 5%;
+    left: 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
+    height: 70px;
+    width: 70px;
+}
+.ddw-icon {
+    background-image: url(weather_icons/ddw.jpg);
+}
+.drw-icon {
+    background-image: url(weather_icons/drw.jpg);
+}
+.dds-icon {
+    background-image: url(weather_icons/dds.jpg);
+}
+.drs-icon {
+    background-image: url(weather_icons/drs.jpg);
+}
+.ndw-icon {
+    background-image: url(weather_icons/ndw.jpg);
+}
+.nrw-icon {
+    background-image: url(weather_icons/nrw.jpg);
+}
+.nds-icon {
+    background-image: url(weather_icons/nds.jpg);
+}
+.nrs-icon {
+    background-image: url(weather_icons/nrs.jpg);
+}
+.hours{
+    position:   absolute;
+    font-size: 20px;
+    color: #05c;
+    left: 5%;
+    top: 15px;
+}
+.date{
+    position:   absolute;
+    font-size: 12px;
+    color: #00c;
+    top: 0;
+    left: 5%;
+}
+.service-report{
+    font-size: 20px;
+    color: #00c;
+    background-color: white;
+    opacity: 0.9;
+    text-align: left;
+}
+.service-report-warning{
+    font-size: 40px;
+    color: #c01;
+    background-color: white;
+    opacity: 0.9;
+    text-align: center;
+}
+.place-input-form {
+    position:   relative;
+    min-width: 200px;
+    height: 40px;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+}
+.place-input {
+    position:   relative;
+    height: 100%;
+    width:60%;
+    float: left;
+}
+.place-submit {
+    position:   relative;
+    height: 100%;
+    width:40%;
+    float: right;
+}
+.city-input-description{
+    position:   relative;
+    color: #00c;
+    width: 50%;
+    height: 12px;
+    font-size: 12px;
+    background-color: white;
+    opacity: 0.8;
+    text-align: center;
+    margin: auto auto 20px auto;
+}

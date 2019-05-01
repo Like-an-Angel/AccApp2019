@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>Weather monitored in: <p type="text" name="place">{{ place }}</p></h1>
+    <br>
+    <p class="service-report">Requesting weather forecast model/type: {{ type }}</p>
+    <br>
+    {% if timestamp==last_timestamp %}
+        <p class="service-report">Connection successful, last data received at {{ timestamp }} </p>
+    {% elif last_timestamp=='None' %}
+        <p class="service-report-warning">No successful requests have been performed since starting</p>
+        <p class="service-report">Last connection attempt performed at {{ timestamp }}</p>
+    {% else %}
+        <p class="service-report-warning">No weather forecast data is received.<br>Displaying data received at {{ last_timestamp }}</p>
+        <p class="service-report">Last connection attempt performed at {{ timestamp }}</p>
+    {% endif %}
+{% endblock content %}
