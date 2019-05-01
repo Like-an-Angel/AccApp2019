@@ -26,4 +26,5 @@ To run robot tests, start the app and from robottests folder run test case files
 
 API used by default is: `fmi::forecast::harmonie::surface::point::simple`
 Alternatively `fmi::forecast::hirlam::surface::point::simple` can be set in configuration.
+
 Example: http://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=fmi::forecast::harmonie::surface::point::simple&place=helsinki&parameters=Temperature,Humidity,WindSpeedMS&timestep=360
