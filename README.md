@@ -10,19 +10,20 @@ Server page http://localhost:5000/server shows current monitored city and the st
 
 Installation guide:
 
-Clone this repository to a local folder with command "git clone https://github.com/Like-an-Angel/AccApp2019.git"
+Clone this repository to a local folder with command `git clone https://github.com/Like-an-Angel/AccApp2019.git`
 
 For environment and package management, Pipenv is used.
-To prepare the environment, after Pipenv is installed, from the project folder run "pipenv install --dev" to install the dependencies specified in Pipfile.lock including packages needed for running unit and robot tests.
-Alternatively, command "pipenv install" installs only packages needed for executing the application.
+To prepare the environment, after Pipenv is installed, from the project folder run `pipenv install --dev` to install the dependencies specified in Pipfile.lock including packages needed for running unit and robot tests.
+Alternatively, command `pipenv install` installs only packages needed for executing the application.
 
-To activate the environment, run "pipenv shell"
-Now, application can be started by command "python run.py" and accessed from http://localhost:5000/
+To activate the environment, run `pipenv shell`
+Now, application can be started by command `python run.py` and accessed from http://localhost:5000/
+Note that python3.7+ specific commands were used.
 
 Project includes unit tests and robot tests.
-To run all unit tests, from project folder run command "python -m unittest discover"
-To run robot tests, start the app and from robottests folder run test case files by command "robot testcase.robot", each of which generates report.html and log.html files with detailed results.
+To run all unit tests, from project folder run command `python -m unittest discover`
+To run robot tests, start the app and from robottests folder run test case files by command `robot testcase.robot`, each of which generates report.html and log.html files with detailed results.
 
-API used by default is: fmi::forecast::harmonie::surface::point::simple
-Alternatively fmi::forecast::hirlam::surface::point::simple can be set in configuration.
+API used by default is: `fmi::forecast::harmonie::surface::point::simple`
+Alternatively `fmi::forecast::hirlam::surface::point::simple` can be set in configuration.
 Example: http://opendata.fmi.fi/wfs?service=WFS&version=2.0.0&request=getFeature&storedquery_id=fmi::forecast::harmonie::surface::point::simple&place=helsinki&parameters=Temperature,Humidity,WindSpeedMS&timestep=360
