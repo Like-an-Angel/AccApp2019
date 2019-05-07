@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template, redirect, request, url_for
 import os
-from app.processing import composeTimeQueryParameters, composeWeatherAPI, droptailForecast, assignUIMarkers, processWeatherData
+from app.processing import composeTimeQueryParameters, composeWeatherAPI, droptailForecast, assignUIMarkers, processWeatherData, computeTermometerParams
 from apscheduler.schedulers.background import BackgroundScheduler
 
 config_type = "dev" # "dev" or "prod"
@@ -22,6 +22,7 @@ weatherAPI = composeWeatherAPI(type, place, parameters, forecast_days, interval_
 @app.route("/", methods=["GET","POST"])
 def index():
     last_forecast, last_timestamp, timestamp = refreshWeatherData()
+    # middle_temp, scale_temp = computeTermometerParams(last_forecast) #,middle_temp=middle_temp,scale_temp=scale_temp
     return render_template("index.html", forecast=last_forecast, timestamp=last_timestamp, place=place.capitalize())
 
 @app.route("/try_place", methods=["POST", "GET"])

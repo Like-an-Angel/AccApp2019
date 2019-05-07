@@ -90,3 +90,13 @@ def processWeatherData(weatherAPI):
     forecast = assignUIMarkers(forecast)
 
     return forecast, timestamp
+
+def computeTermometerParams(forecast):
+    temperatures = [ forecast[record]['Temperature'] for record in forecast]
+    print(f'computeTermometerParams: temperatures: {temperatures} \n')
+    if temperatures:
+        temperature_max = max(temperatures)
+        temperature_min = min(temperatures)
+        return (temperature_max + temperature_min)/2, 35/(temperature_max-temperature_min)
+    else:
+        return 0, 0

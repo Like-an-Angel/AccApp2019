@@ -23,4 +23,6 @@ def fetchWeatherData(apiRequest):
             forecast[record['BsWfs:Time']] = dict()
         forecast[record['BsWfs:Time']][record['BsWfs:ParameterName']] = record['BsWfs:ParameterValue']
 
+    # print(f'From fetchWeatherData>forecast: {forecast}\n')
+
     return forecast, timestamp
