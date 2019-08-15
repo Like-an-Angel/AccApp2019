@@ -9,6 +9,7 @@ jobs: # a collection of steps
       - run: sudo pip install --upgrade pip
       - run: sudo pip install pipenv
       - run: sudo pipenv install --dev
+      - run: pipenv shell
       #- run: sudo pip install -r requirements.txt
       - run: python -m unittest discover
       # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
