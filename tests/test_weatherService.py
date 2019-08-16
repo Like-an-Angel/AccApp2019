@@ -6,7 +6,8 @@ from app.weatherService import fetchWeatherData
 import os
 import mock
 
-MOCK_API = f"{os.getcwd()}\\tests\\mock-wfs.xml"
+#MOCK_API = f"{os.getcwd()}\\tests\\mock-wfs.xml"
+MOCK_API = f"{os.getcwd()}/tests/mock-wfs.xml"
 """
 Since "requests.get()" can not open local file (for mock API purposes), function is substituted by "mock_requests_get()"
 "requests.get()" returns an object and data is accessed by object.content, mockUrlData imitates this object.
@@ -25,7 +26,7 @@ def mock_requests_get(path):
     return mockData
 
 class TestFetchWeatherData(unittest.TestCase):
-    
+
     @mock.patch('requests.get', side_effect=mock_requests_get)
     def test_fetchWeatherData_Datatypes(self, mock):
         self.forecast, self.timestamp = fetchWeatherData(MOCK_API)
